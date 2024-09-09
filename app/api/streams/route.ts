@@ -2,10 +2,9 @@ import { prismaClient } from "@/app/lib/db";
 import { YT_REGEX } from "@/app/lib/utils";
 import { getServerSession } from "next-auth";
 import { NextRequest, NextResponse } from "next/server";
-//@ts-ignore
-import youtubesearchapi from "youtube-search-api";
 import { z } from "zod";
-
+//@ts-ignore
+import { youtubesearchapi } from "youtube-search-api";
 const MAX_QUEUE_LEN = 20;
 
 const CreateStreamSchema = z.object({
